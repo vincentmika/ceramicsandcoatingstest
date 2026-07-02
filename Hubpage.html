@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ceramics and Coatings Home</title>
+  <style>
+    :root {
+      color-scheme: light;
+      font-family: Arial, sans-serif;
+      background: #f5f6f8;
+      color: #222;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background: #f5f6f8;
+    }
+
+    .site-shell {
+      width: 100%;
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 2rem 1.25rem 3rem;
+      box-sizing: border-box;
+    }
+
+    .banner {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1.5rem 1.25rem;
+      background: #00a9b4;
+      color: #fff;
+      margin-bottom: 0;
+      min-height: 187px;
+    }
+
+    .tabs-banner {
+      display: flex;
+      justify-content: center;
+      padding: 0.9rem 1.25rem;
+      background: #ffffff;
+      border: 1px solid #dde2e8;
+      border-top: none;
+      border-radius: 0 0 24px 24px;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+    }
+
+    .banner img {
+      width: 170px;
+      height: 170px;
+      object-fit: contain;
+      background: transparent;
+      padding: 0;
+      border-radius: 0;
+      border: none;
+      flex-shrink: 0;
+      align-self: center;
+    }
+
+    .banner-main {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      min-width: 0;
+    }
+
+    .banner-text {
+      min-width: 0;
+    }
+
+    .tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      justify-content: center;
+      margin: 0;
+      align-items: center;
+    }
+
+    .banner h1 {
+      margin: 0;
+      font-size: 2.4rem;
+      letter-spacing: -0.03em;
+    }
+
+    .banner p {
+      margin: 0.45rem 0 0;
+      font-size: 1.15rem;
+      color: rgba(255,255,255,0.88);
+      line-height: 1.5;
+    }
+
+    .tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      justify-content: center;
+      margin: 0;
+      align-items: center;
+    }
+
+    .tab-button {
+      border: 1px solid #dde2e8;
+      background: #fff;
+      color: #222;
+      padding: 0.65rem 0.95rem;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+      font-weight: 600;
+      font-size: 1rem;
+      outline: none;
+      line-height: 1.4;
+      white-space: nowrap;
+    }
+
+    .tab-button:hover,
+    .tab-button:focus-visible {
+      background: #eef3fb;
+    }
+
+    .tab-button.active {
+      background: #00a9b4;
+      color: #fff;
+      transform: none;
+      border-color: #00a9b4;
+    }
+
+    .tab-content {
+      background: #fff;
+      border: 1px solid #dde2e8;
+      border-radius: 24px;
+      box-shadow: 0 20px 60px rgba(15, 23, 42, 0.08);
+      overflow: hidden;
+    }
+
+    .tab-panel {
+      display: none;
+      min-height: 70vh;
+      background: #fff;
+    }
+
+    .tab-panel.active {
+      display: block;
+    }
+
+    .tab-panel iframe {
+      width: 100%;
+      min-height: 80vh;
+      border: none;
+      display: block;
+    }
+
+    .home-panel {
+      padding: 2rem;
+    }
+
+    .home-panel h2 {
+      margin-top: 0;
+      font-size: 1.75rem;
+    }
+
+    .home-panel p {
+      margin: 1rem 0;
+      line-height: 1.75;
+      color: #434d5a;
+    }
+
+    .home-panel ul {
+      margin: 1rem 0 0;
+      padding-left: 1.4rem;
+      color: #434d5a;
+      line-height: 1.8;
+    }
+
+    .home-panel a {
+      color: #1f4ed8;
+      text-decoration: none;
+    }
+
+    .home-panel .photo-block {
+      margin-top: 1.75rem;
+      border: 1px solid #dde2e8;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(15, 23, 42, 0.08);
+      background: #fff;
+    }
+
+    .home-panel .photo-block img {
+      width: 100%;
+      display: block;
+      object-fit: cover;
+      max-height: 520px;
+    }
+
+    .home-panel .photo-caption {
+      padding: 1rem 1.25rem 1.5rem;
+      color: #434d5a;
+      font-size: 0.95rem;
+      text-align: center;
+    }
+
+    @media (max-width: 720px) {
+      .site-shell {
+        padding: 1rem;
+      }
+
+      .banner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: auto;
+        padding: 1rem;
+      }
+
+      .banner-main {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.75rem;
+      }
+
+      .banner img {
+        width: 96px;
+        height: 96px;
+      }
+
+      .banner-text {
+        text-align: center;
+        width: 100%;
+      }
+
+      .tabs-banner {
+        padding: 0.75rem 1rem;
+      }
+
+      .tabs {
+        width: 100%;
+        justify-content: flex-start;
+      }
+
+      .tab-button {
+        flex: 1 1 100%;
+        width: 100%;
+        padding: 0.8rem 1rem;
+        text-align: center;
+      }
+
+      .tab-panel iframe {
+        min-height: 60vh;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="site-shell">
+    <div class="banner">
+      <div class="banner-main">
+        <img src="CCG_Logo.svg" alt="CCG logo" />
+        <div class="banner-text">
+          <h1>Ceramics and Coatings Group</h1>
+          <p>The University of Manchester</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="tabs-banner">
+      <div class="tabs" role="tablist" aria-label="Primary navigation tabs">
+        <button class="tab-button active" type="button" data-target="home-panel" role="tab" aria-selected="true">Home</button>
+        <button class="tab-button" type="button" data-target="group-panel" role="tab" aria-selected="false">Meet the Group</button>
+        <button class="tab-button" type="button" data-target="papers-panel" role="tab" aria-selected="false">Our Papers</button>
+        <button class="tab-button" type="button" data-target="seeus-panel" role="tab" aria-selected="false">See Us @ ICACC 2027</button>
+        <button class="tab-button" type="button" data-target="eurocorr-panel" role="tab" aria-selected="false">See Us @ EUROCORR</button>
+      </div>
+    </div>
+
+    <div class="tab-content">
+      <section id="home-panel" class="tab-panel active home-panel" role="tabpanel">
+        <h2>About Us</h2>
+        <p><b>Research group based at the Department of Materials, University of Manchester.</b> Our office is based in the Henry Royce Institute Hub Building, where the Henry Royce Institute is the UK's Advanced Materials Research Network.</p>
+        <p>The research group works on projects including silicon carbide for nuclear applications, thermal barrier coatings (TBCs) and environmental barrier coatings (EBCs) for next-generation jet engines.</p>
+        <div class="photo-block">
+          <img src="example_group_photo.jpg" alt="Ceramics and Coatings group photo" />
+          <div class="photo-caption">Ceramics and Coatings group photo.</div>
+        </div>
+      </section>
+
+      <section id="group-panel" class="tab-panel" role="tabpanel" aria-hidden="true">
+        <iframe src="MeetTheGroup.html" title="Meet the Group" loading="lazy"></iframe>
+      </section>
+
+      <section id="papers-panel" class="tab-panel" role="tabpanel" aria-hidden="true">
+        <iframe src="OurPapers.html" title="Our Papers" loading="lazy"></iframe>
+      </section>
+
+      <section id="seeus-panel" class="tab-panel" role="tabpanel" aria-hidden="true">
+        <iframe src="See Us At X.html" title="See Us At ICACC 2027" loading="lazy"></iframe>
+      </section>
+
+      <section id="eurocorr-panel" class="tab-panel" role="tabpanel" aria-hidden="true">
+        <iframe src="See Us At EUROCORR.html" title="See Us @ EUROCORR 2026" loading="lazy"></iframe>
+      </section>
+    </div>
+  </div>
+
+  <script>
+    const buttons = document.querySelectorAll('.tab-button');
+    const panels = document.querySelectorAll('.tab-panel');
+
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        buttons.forEach(btn => {
+          btn.classList.remove('active');
+          btn.setAttribute('aria-selected', 'false');
+        });
+
+        panels.forEach(panel => {
+          panel.classList.remove('active');
+          panel.setAttribute('aria-hidden', 'true');
+        });
+
+        button.classList.add('active');
+        button.setAttribute('aria-selected', 'true');
+
+        const targetId = button.getAttribute('data-target');
+        const targetPanel = document.getElementById(targetId);
+        if (targetPanel) {
+          targetPanel.classList.add('active');
+          targetPanel.setAttribute('aria-hidden', 'false');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

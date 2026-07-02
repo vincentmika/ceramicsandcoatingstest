@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ceramics and Coatings @ The University of Manchester</title>
+ <style>
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  background: #f5f6f8;
+  color: #222;
+  margin: 0;
+  padding: 2rem;
+}
+
+.faculty-directory {
+  display: grid;
+  gap: 1.75rem; /* Gap between faculty cards */
+}
+
+.faculty-directory h2 {
+  text-align: center;
+  margin-bottom: 0.75rem;
+  font-size: 2rem;
+}
+
+.faculty-group {
+  background: #fafafa;
+  border: 1px solid #ddd;
+  border-radius: 18px;
+  padding: 0.75rem 1rem 1rem;
+}
+
+.faculty-group summary {
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  list-style: none;
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+.faculty-group summary::-webkit-details-marker,
+.faculty-group summary::marker {
+  display: none;
+}
+
+.faculty-group summary::after {
+  content: "▾";
+  float: right;
+  transition: transform 0.2s ease;
+}
+
+.faculty-group[open] summary::after {
+  transform: rotate(180deg);
+}
+
+.faculty-group-content {
+  display: grid;
+  gap: 1.75rem;
+}
+
+.faculty-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem;
+  border: 1px solid #ddd;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+  flex-wrap: nowrap; /* keep image on left */
+}
+
+.faculty-photo {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 18px;
+  flex-shrink: 0;
+  border: 2px solid #e6e6e6;
+}
+
+.faculty-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.faculty-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  font-size: 1.25rem;
+}
+
+.faculty-info p {
+  margin: 0;
+  line-height: 1.75;
+  color: #434d5a;
+}
+
+@media (max-width: 720px) {
+  body {
+    padding: 1rem;
+  }
+
+  .faculty-card {
+    gap: 0.75rem;
+    padding: 1.25rem;
+    margin-bottom: 2rem;
+  }
+
+  .faculty-photo {
+    width: 110px;
+    height: 110px;
+  }
+}
+</style>
+
+<section class="faculty-directory">
+  <h2>Meet the Group</h2>
+
+<div class="faculty-group-content">
+      <article class="faculty-card">
+        <img src="https://research.manchester.ac.uk/files-asset/238670893/Ping_Xiao_photo3.png/" alt="Prof. Ping Xiao" class="faculty-photo" />
+        <div class="faculty-info">
+          <h3>Prof. Ping Xiao</h3>
+          <p class="faculty-title">Rolls-Royce/Royal Academy of Engineering Research Chair</p>
+          <p>One sentence blurb submitted by above.</p>
+        </div>
+      </article>
+      <div class="faculty-group-content">
+      <article class="faculty-card">
+        <img src="https://research.manchester.ac.uk/files-asset/300522059/img_1242_1_.jpeg?w=320&f=webp" alt="Prof. Ying Chen" class="faculty-photo" />
+        <div class="faculty-info">
+          <h3>Prof. Ying Chen</h3>
+          <p class="faculty-title">Lecturer in Surface Engineering</p>
+          <p>One sentence blurb submitted by above.</p>
+        </div>
+      </article>
+
+  <details class="faculty-group" open> <!-- Collapsible Group -->
+    <summary>Thermal Barrier Coatings</summary>
+    <div class="faculty-group-content">
+      <article class="faculty-card">
+        <img src="https://research.manchester.ac.uk/files-asset/238670893/Ping_Xiao_photo3.png/" alt="Dr. Jane Doe" class="faculty-photo" />
+        <div class="faculty-info">
+          <h3>Dr. Jane Doe</h3>
+          <p class="faculty-title">Professor of Materials Science</p>
+          <p>Expert in ceramic coatings, high-temperature materials, and surface engineering.</p>
+        </div>
+      </article>
+
+      <article class="faculty-card">
+        <img src="https://research.manchester.ac.uk/files-asset/238670893/Ping_Xiao_photo3.png/" alt="Dr. John Smith" class="faculty-photo" />
+        <div class="faculty-info">
+          <h3>Dr. John Smith</h3>
+          <p class="faculty-title">Associate Professor of Coatings</p>
+          <p>Focused on thin-film deposition, corrosion protection, and advanced coatings.</p>
+        </div>
+      </article>
+    </div>
+  </details> <!-- End Collapsible Group -->
+
+    <details class="faculty-group" open> <!-- Collapsible Group -->
+    <summary>Environmental Barrier Coatings</summary>
+    <div class="faculty-group-content">
+      <article class="faculty-card">
+        <img src="https://research.manchester.ac.uk/files-asset/238670893/Ping_Xiao_photo3.png/" alt="Dr. Jane Doe" class="faculty-photo" />
+        <div class="faculty-info">
+          <h3>Dr. Jane Doe</h3>
+          <p class="faculty-title">Professor of Materials Science</p>
+          <p>Expert in ceramic coatings, high-temperature materials, and surface engineering.</p>
+        </div>
+      </article>
+
+      <article class="faculty-card">
+        <img src="https://research.manchester.ac.uk/files-asset/238670893/Ping_Xiao_photo3.png/" alt="Dr. John Smith" class="faculty-photo" />
+        <div class="faculty-info">
+          <h3>Dr. John Smith</h3>
+          <p class="faculty-title">Associate Professor of Coatings</p>
+          <p>Focused on thin-film deposition, corrosion protection, and advanced coatings.</p>
+        </div>
+      </article>
+    </div>
+  </details> <!-- End Collapsible Group -->
+  
+
+</section>

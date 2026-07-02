@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Papers</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      background: #f5f6f8;
+      color: #222;
+      margin: 0;
+      padding: 2rem;
+    }
+
+    .papers-container {
+      max-width: 980px;
+      margin: 0 auto;
+      display: grid;
+      gap: 1rem;
+    }
+
+    .papers-header {
+      text-align: center;
+      margin-bottom: 0.5rem;
+    }
+
+    .papers-header h1 {
+      margin: 0;
+      font-size: 2rem;
+      letter-spacing: -0.03em;
+    }
+
+    .paper-card {
+      background: #fff;
+      border: 1px solid #dde2e8;
+      border-radius: 18px;
+      padding: 1.5rem;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      display: block;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .paper-link:hover .paper-card,
+    .paper-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 34px rgba(15, 23, 42, 0.1);
+    }
+
+    .paper-card h2 {
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+      font-size: 1.25rem;
+    }
+
+    .paper-card p {
+      margin: 0;
+      line-height: 1.75;
+      color: #434d5a;
+    }
+
+    @media (max-width: 640px) {
+      body {
+        padding: 1rem;
+      }
+
+      .paper-card {
+        padding: 1.25rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="papers-container">
+    <header class="papers-header">
+      <h1>Our Papers</h1>
+      <p>Short summaries of some of our recent publications.</p>
+    </header>
+
+    <a class="paper-card paper-link" href="https://doi.org/10.1016/j.jeurceramsoc.2023.06.025" target="_blank" rel="noopener">
+      <h2>Constrained sintering and thermal ageing behaviour of electrophoretically deposited Yb2Si2O7 environmental barrier coating</h2>
+      <i>Esma Yilmaz, Ahmet Hilmi Paksoy, Grant Gibson, Ping Xiao</i>
+      <p>One sentence description of the paper.</p>
+    </a>
+
+    <a class="paper-card paper-link" href="https://doi.org/10.1016/j.jeurceramsoc.2023.06.025" target="_blank" rel="noopener">
+      <h2>Constrained sintering and thermal ageing behaviour of electrophoretically deposited Yb2Si2O7 environmental barrier coating</h2>
+      <i>Esma Yilmaz, Ahmet Hilmi Paksoy, Grant Gibson, Ping Xiao</i> 
+      <p>One sentence description of the paper.</p>
+    </a>
+  </div>
+</body>
+</html>
