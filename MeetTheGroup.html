@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ceramics and Coatings @ The University of Manchester</title>
+ <style>
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  background: #f5f6f8;
+  color: #222;
+  margin: 0;
+  padding: 2rem;
+}
+
+.faculty-directory {
+  display: grid;
+  gap: 1.75rem; /* Gap between faculty cards */
+}
+
+.faculty-directory h2 {
+  text-align: center;
+  margin-bottom: 0.75rem;
+  font-size: 2rem;
+}
+
+.faculty-group {
+  background: #fafafa;
+  border: 1px solid #ddd;
+  border-radius: 18px;
+  padding: 0.75rem 1rem 1rem;
+}
+
+.faculty-group summary {
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  list-style: none;
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+.faculty-group summary::-webkit-details-marker,
+.faculty-group summary::marker {
+  display: none;
+}
+
+.faculty-group summary::after {
+  content: "▾";
+  float: right;
+  transition: transform 0.2s ease;
+}
+
+.faculty-group[open] summary::after {
+  transform: rotate(180deg);
+}
+
+.faculty-group-content {
+  display: grid;
+  gap: 1.75rem;
+}
+
+.faculty-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem;
+  border: 1px solid #ddd;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+  flex-wrap: nowrap; /* keep image on left */
+}
+
+.faculty-photo {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 18px;
+  flex-shrink: 0;
+  border: 2px solid #e6e6e6;
+}
+
+.faculty-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.faculty-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  font-size: 1.25rem;
+}
+
+.faculty-info p {
+  margin: 0;
+  line-height: 1.75;
+  color: #434d5a;
+}
+
+@media (max-width: 720px) {
+  body {
+    padding: 1rem;
+  }
+
+  .faculty-card {
+    gap: 0.75rem;
+    padding: 1.25rem;
+    margin-bottom: 2rem;
+  }
+
+  .faculty-photo {
+    width: 110px;
+    height: 110px;
+  }
+}
+</style>
+
+<section class="faculty-directory">
+  <h2>Meet the Group</h2>
+
+<div class="faculty-group-content">
+
+      <article class="faculty-card">
+        <img src="https://research.manchester.ac.uk/files-asset/238670893/Ping_Xiao_photo3.png/" alt="Prof. Ping Xiao" class="faculty-photo" />
+        <div class="faculty-info">
+          <h3>Prof. Ping Xiao</h3>
+          <p class="faculty-title">Rolls-Royce/Royal Academy of Engineering Research Chair</p>
+          <p>My research is focused on developed of ceramics and coatings for high temperature applications.</p>
+        </div>
+      </article>
+
+      <div class="faculty-group-content">
+      <article class="faculty-card">
+        <img src="https://research.manchester.ac.uk/files-asset/300522059/img_1242_1_.jpeg?w=320&f=webp" alt="Prof. Ying Chen" class="faculty-photo" />
+        <div class="faculty-info">
+          <h3>Dr. Ying Chen</h3>
+          <p class="faculty-title">Senior Lecturer in Surface Engineering</p>
+          <p>My research develops innovative surface engineering and coating solutions for extreme environments, with a focus on microstructural design, fracture resistance and environmental durability.</p>
+        </div>
+      </article>
+
+  <details class="faculty-group" open> <!-- Collapsible Group -->
+    <summary>Thermal Barrier Coatings</summary>
+    <div class="faculty-group-content">
+
+      <article class="faculty-card">
+        <img src="C:\Users\s23246vm\Downloads\CCG_Website\photos\pedro.jpg" alt="Pedro Martins" class="faculty-photo" />
+        <div class="faculty-info">
+          <h3>Pedro Martins</h3>
+          <p class="faculty-title">Research Associate</p>
+          <p>My research is focused on the conceptual development and thermo-chemical/mechanical testing of thermal barrier coatings systems (TBCs) for the next generation of gas-turbine engines. </p>
+        </div>
+      </article>
+
+      <article class="faculty-card">
+        <img src="C:\Users\s23246vm\Downloads\CCG_Website\photos\zichen.jpeg" alt="Zichen Li" class="faculty-photo" />
+        <div class="faculty-info">
+          <h3>Zichen Li</h3>
+          <p class="faculty-title">Research Associate</p>
+          <p>My research focuses on developing next-generation TBCs with strong resistance to CMAS attack and fracture.</p>
+        </div>
+      </article>
+
+      <article class="faculty-card">
+        <img src="C:\Users\s23246vm\Downloads\CCG_Website\photos\soren.jpg" alt="Soren Bentley" class="faculty-photo" />
+        <div class="faculty-info">
+          <h3>Soren Bentley</h3>
+          <p class="faculty-title">PhD Researcher</p>
+          <p>My work focuses on developing understanding of TBCs deposited using suspension plasma spraying.</p>
+        </div>
+      </article>
+
+      <article class="faculty-card">
+        <img src="C:\Users\s23246vm\Downloads\CCG_Website\photos\xiaohancui.jpg" alt="Xiaohan Cui" class="faculty-photo" />
+        <div class="faculty-info">
+          <h3>Xiaohan Cui</h3>
+          <p class="faculty-title">PhD Researcher</p>
+          <p>My research focuses on understanding the oxidation and degradation mechanisms of thermal barrier coating systems, particularly the evolution of bond coats and thermally grown oxides (TGOs). The aim is to investigate the effects of bond coat chemistry and pre-oxidation treatments on coating durability, contributing to the development of longer-lasting TBCs for high-temperature applications.</p>
+        </div>
+      </article>
+
+      <article class="faculty-card">
+        <img src="C:\Users\s23246vm\Downloads\CCG_Website\photos\rajdeep.png" alt="Rajdeep Sarkar" class="faculty-photo" />
+        <div class="faculty-info">
+          <h3>Rajdeep Sarkar</h3>
+          <p class="faculty-title">PhD Researcher</p>
+          <p>My research focuses on developing oxidation-resistant high-entropy alloy bond coatings for high-temperature applications. I investigate composition, phase stability, diffusion and oxidation behaviour using computational and experimental approaches.</p>
+        </div>
+      </article>
+
+      <article class="faculty-card">
+        <img src="C:\Users\s23246vm\Downloads\CCG_Website\photos\xiaomusui.jpg" alt="Xiaomu Sui" class="faculty-photo" />
+        <div class="faculty-info">
+          <h3>Xiaomu Sui</h3>
+          <p class="faculty-title">PhD Researcher</p>
+          <p>My research focuses on understanding CMAS degradation mechanisms in TBC materials, with the aim of guiding the design of next-generation TBCs with improved CMAS resistance.</p>
+        </div>
+      </article>
+
+      <article class="faculty-card">
+        <img src="C:\Users\s23246vm\Downloads\CCG_Website\photos\pengtao.jpg" alt="Peng Tao" class="faculty-photo" />
+        <div class="faculty-info">
+          <h3>Peng Tao</h3>
+          <p class="faculty-title">PhD Researcher</p>
+          <p>My PhD research focuses on developing next-generation thermal barrier coating (TBC) materials with improved mechanical properties, particularly fracture toughness. I investigate the relationships between composition, microstructure, deformation mechanisms, and mechanical performance to understand how ceramic materials can be designed for enhanced toughness and damage tolerance.</p>
+        </div>
+      </article>
+
+      <article class="faculty-card">
+        <img src="C:\Users\s23246vm\Downloads\CCG_Website\photos\thomas.jpg" alt="Dan Thomas" class="faculty-photo" />
+        <div class="faculty-info">
+          <h3>Dan Thomas</h3>
+          <p class="faculty-title">PhD Researcher</p>
+          <p>My PhD research investigates co-doping strategies in YSZ to develop next-generation TBCs with improved phase stability, mechanical performance and CMAS resistance, enabling more efficient gas turbines.</p>
+        </div>
+      </article>
+
+      <article class="faculty-card">
+        <img src="C:\Users\s23246vm\Downloads\CCG_Website\photos\yiwu.jpg" alt="Yi Wu" class="faculty-photo" />
+        <div class="faculty-info">
+          <h3>Yi Wu</h3>
+          <p class="faculty-title">PhD Researcher</p>
+          <p>My PhD research focuses on the mechanical and fracture behaviour of advanced ceramic materials and coatings, with an emphasis on their relationships with microstructure.</p>
+        </div>
+      </article>
+
+    </div>
+  </details> <!-- End Collapsible Group -->
+
+    <details class="faculty-group" open> <!-- Collapsible Group -->
+    <summary>Environmental Barrier Coatings</summary>
+    <div class="faculty-group-content">
+
+      <article class="faculty-card">
+        <img src="C:\Users\s23246vm\Downloads\CCG_Website\photos\danscotson.jpg" alt="Dan Scotson" class="faculty-photo" />
+        <div class="faculty-info">
+          <h3>Dan Scotson</h3>
+          <p class="faculty-title">Doctoral Prize Fellow</p>
+          <p>Investigating the evolution of EBCs with novel materials analysis techniques to improve coating lifetime.</p>
+        </div>
+      </article>
+
+      <article class="faculty-card">
+        <img src="C:\Users\s23246vm\Downloads\CCG_Website\photos\esmayilmaz.jpg" alt="Esma Yilmaz" class="faculty-photo" />
+        <div class="faculty-info">
+          <h3>Esma Yilmaz</h3>
+          <p class="faculty-title">Research Associate</p>
+          <p>My research focuses on the processing of advanced ceramics, coatings, and composites for nuclear and high-temperature applications. I develop next-generation materials with enhanced performance and environmental resistance for operation in demanding environments.</p>
+        </div>
+      </article>
+
+      <article class="faculty-card">
+        <img src="C:\Users\s23246vm\Downloads\CCG_Website\photos\thomashart.jpg" alt="Thomas Hart" class="faculty-photo" />
+        <div class="faculty-info">
+          <h3>Thomas Hart</h3>
+          <p class="faculty-title">PhD Researcher</p>
+          <p>I am currently studying the high-throughput development of novel EBC materials.</p>
+        </div>
+      </article>
+
+      <article class="faculty-card">
+        <img src="C:\Users\s23246vm\Downloads\CCG_Website\photos\chuyang.jpg" alt="Chuyang Li" class="faculty-photo" />
+        <div class="faculty-info">
+          <h3>Chuyang Li</h3>
+          <p class="faculty-title">PhD Researcher</p>
+          <p>My research focuses on understanding the degradation mechanism of CMAS in ytterbium disilicate environmental barrier coatings.</p>
+        </div>
+      </article>
+
+      <article class="faculty-card">
+        <img src="C:\Users\s23246vm\Downloads\CCG_Website\photos\vincent.jpg" alt="Vincent Mika" class="faculty-photo" />
+        <div class="faculty-info">
+          <h3>Vincent Mika</h3>
+          <p class="faculty-title">PhD Researcher</p>
+          <p>My research focuses on developing and testing promising modifications for next-generation bond coats for environmental barrier coating systems.</p>
+        </div>
+      </article>
+
+    </div>
+  </details> <!-- End Collapsible Group -->
+
+      <details class="faculty-group" open> <!-- Collapsible Group -->
+    <summary>Aerosol Deposition (AD)</summary>
+    <div class="faculty-group-content">
+
+      <article class="faculty-card">
+        <img src="C:\Users\s23246vm\Downloads\CCG_Website\photos\zongkai.jpg" alt="Zongkai Feng" class="faculty-photo" />
+        <div class="faculty-info">
+          <h3>Zongkai Feng</h3>
+          <p class="faculty-title">PhD Researcher</p>
+          <p>My research focuses on using the aerosol deposition method to fabricate different types of ceramic coatings and investigate their toughening mechanisms.</p>
+        </div>
+      </article>
+
+      <article class="faculty-card">
+        <img src="C:\Users\s23246vm\Downloads\CCG_Website\photos\yunye.jpg" alt="Yunye Gao" class="faculty-photo" />
+        <div class="faculty-info">
+          <h3>Yunye Gao</h3>
+          <p class="faculty-title">PhD Researcher</p>
+          <p>My research focuses on the microstructural evolution and structure–property relationships of aerosol-deposited ceramic coatings, with particular interests in mechanical performance, thermal stability, and functional oxide coatings.</p>
+        </div>
+      </article>
+
+        <article class="faculty-card">
+        <img src="C:\Users\s23246vm\Downloads\CCG_Website\photos\abir.jpg" alt="Mirazul Mahmud Abir" class="faculty-photo" />
+        <div class="faculty-info">
+          <h3>Mirazul Mahmud Abir</h3>
+          <p class="faculty-title">PhD Researcher</p>
+          <p>Investigating the Processing–Microstructure–Wear Relationship in Aerosol Deposited Ceramic Coatings.</p>
+        </div>
+      </article>
+
+    </div>
+  </details> <!-- End Collapsible Group -->
+
+    </details> <!-- End Collapsible Group -->
+
+    <details class="faculty-group" open> <!-- Collapsible Group -->
+    <summary>SiC/SiC</summary>
+    <div class="faculty-group-content">
+
+      <article class="faculty-card">
+        <img src="C:\Users\s23246vm\Downloads\CCG_Website\photos\chenghao.jpg" alt="Chenghao Du" class="faculty-photo" />
+        <div class="faculty-info">
+          <h3>Chenghao Du</h3>
+          <p class="faculty-title">PhD Researcher</p>
+          <p>My research is about how the processing route of SiCf/SiC composites, especially PIP, controls matrix crystallisation and density, and how this affects their oxidation behaviour.</p>
+        </div>
+      </article>
+
+            <article class="faculty-card">
+        <img src="C:\Users\s23246vm\Downloads\CCG_Website\photos\cem.jpg" alt="Erol Cem Ozgor" class="faculty-photo" />
+        <div class="faculty-info">
+          <h3>Erol Cem Ozgor</h3>
+          <p class="faculty-title">PhD Researcher</p>
+          <p>Investigation of allyl-hydrido polycarbosilane pyrolysis stage to form SiC and coatings of SiC fibers with Yb2Si2O7 to facilitate fiber pull-out behaviour in SiC/SiC composites.</p>
+        </div>
+      </article>
+
+    </div>
+  </details> <!-- End Collapsible Group -->
+  
+
+</section>
